@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🩺 AI Code Doctor
 
-## Getting Started
+**AI-powered Python Code Review and Optimization Assistant**
 
-First, run the development server:
+AI Code Doctor is a web-based application that helps developers analyze, understand, and improve their Python code using automated analysis and AI-powered explanations.
+
+## 🚀 Features
+
+- 🔍 **Code Review:** Detect syntax errors, possible coding issues, and code quality concerns.
+- ⚡ **Optimization:** Identify potential code optimization opportunities.
+- 🔐 **Security Analysis:** Detect common security risks such as hard-coded secrets and unsafe `eval()` usage.
+- 📊 **Complexity Analysis:** Analyze time and space complexity.
+- 🤖 **AI Explanation:** Generate explanations and suggestions for submitted code.
+- ✨ **Code Improvement:** Suggest and apply supported Python code improvements.
+
+## 🛠️ Tech Stack
+
+**Frontend**
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Monaco Editor
+
+**Backend**
+- Python
+- FastAPI
+- Abstract Syntax Tree (AST)
+- OpenAI API (optional)
+
+## 📁 Project Structure
+
+```text
+AI-Code-Doctor/
+├── app/
+│   ├── page.tsx
+│   ├── layout.tsx
+│   └── globals.css
+├── backend/
+│   ├── analyzer/
+│   │   ├── ai_explanation.py
+│   │   ├── code_review.py
+│   │   ├── complexity.py
+│   │   ├── improvement.py
+│   │   ├── optimization.py
+│   │   └── security.py
+│   └── main.py
+├── public/
+├── package.json
+└── README.md
+```
+
+## ⚙️ Installation and Setup
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/ashrithadevikondepudi-design/AI--Code--Doctor.git
+cd AI--Code--Doctor
+```
+
+### 2. Install frontend dependencies
+
+```bash
+npm install
+```
+
+### 3. Start the frontend
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 4. Set up the backend
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+cd backend
+python -m pip install fastapi uvicorn pydantic python-dotenv openai
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 5. Start the backend
 
-## Learn More
+```bash
+python -m uvicorn main:app --reload --port 8000
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🌐 Application URLs
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Frontend: http://localhost:3000
+- Backend: http://127.0.0.1:8000
+- API Documentation: http://127.0.0.1:8000/docs
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔒 Security
 
-## Deploy on Vercel
+Never upload API keys, passwords, or `.env` files to GitHub. Keep secrets in environment variables.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 👩‍💻 Author
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Ashritha**
+
+GitHub: [@ashrithadevikondepudi-design](https://github.com/ashrithadevikondepudi-design)
+
+---
+
+*AI Code Doctor — Making Python code better, one analysis at a time.*
